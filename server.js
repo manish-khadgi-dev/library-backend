@@ -20,6 +20,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 //API routers
+import userRouter from "./src/routers/userRouter.js";
+app.use("/api/v1/user", userRouter);
 
 //uncaugh router hanlder   page not found hanlde garna laiX
 app.use("*", (req, res) => {
