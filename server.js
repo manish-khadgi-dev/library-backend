@@ -21,7 +21,9 @@ app.use(express.json());
 
 //API routers
 import userRouter from "./src/routers/userRouter.js";
+import bookRouter from "./src/routers/bookRouter.js";
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/book", bookRouter);
 
 //uncaugh router hanlder   page not found hanlde garna laiX
 app.use("*", (req, res) => {
