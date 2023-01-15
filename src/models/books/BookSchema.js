@@ -13,6 +13,8 @@ const userSchema = new mongoose.Schema(
     isbn: {
       type: String,
       required: true,
+      unique: true,
+      index: 1,
     },
     year: {
       type: Number,
